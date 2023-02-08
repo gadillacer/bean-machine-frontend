@@ -156,7 +156,43 @@ function App() {
     setFeedback(`Minting your ${CONFIG.NFT_NAME}...`);
     setClaimingNft(true);
 
-    if (!merkleProof) return
+    if (!merkleProof && !data.isWhitelistOnly) {
+      blockchain.smartContract.methods
+      .mint()
+      .send({
+        gasLimit: String(totalGasLimit),
+        to: CONFIG.CONTRACT_ADDRESS,
+        from: blockchain.account,
+        value: totalCostWei,
+      })
+      .once("error", (err) => {
+        console.log(err);
+        setFeedback("Sorry, something went errored please try again later.");
+        setAlertState({
+          open: true,
+          message: "Sorry, something went errored please try again later.",
+          severity: "error",
+          hideDuration: null,
+        });
+        setClaimingNft(false);
+      })
+      .then((receipt) => {
+        console.log(receipt);
+        setFeedback(
+          `WOW, the ${CONFIG.NFT_NAME} is yours! go visit Opensea.io to view it.`
+        );
+        setAlertState({
+          open: true,
+          message: "Congratulations! Mint succeeded!",
+          severity: "success",
+          hideDuration: 7000,
+        });
+        setClaimingNft(false);
+        dispatch(fetchData(blockchain.account));
+      });    
+    } else if (!merkleProof) { 
+      return 
+    } else {
     blockchain.smartContract.methods
       .whitelistMint(merkleProof)
       .send({
@@ -190,6 +226,7 @@ function App() {
         setClaimingNft(false);
         dispatch(fetchData(blockchain.account));
       });
+    }
   };
 
   const getData = () => {
@@ -236,7 +273,7 @@ function App() {
                 getData();
               }}
             >
-              Connect Wallet
+              Connect Goerli
             </s.CTAButton>
           ) : (
             <>

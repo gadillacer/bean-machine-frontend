@@ -1,12 +1,12 @@
 # Welcome to Bean Machine NFT 💎
 
-[ℹ️ Website](https://thestripesnft.com/)
+[ℹ️ Website](https://bean-machine-frontend.vercel.app/)
 
 # The Bean Machine minting dapp 🔥
 
 This repo provides a nice and easy way for linking an existing NFT smart contract to this minting dapp. There are two ways of using this repo, you can go the simple route or the more complex one.
 
-The simple route is so simple, all you need to do is download the build folder on the release page and change the configuration to fit your needs. (Follow the video for a walk through).
+The simple route is so simple, all you need to do is download the build folder on the release page and change the configuration to fit your needs.
 
 The more complex route allows you to add additional functionality if you are comfortable with coding in react.js. (Follow the below instructions for a walk through).
 
@@ -29,14 +29,13 @@ Note: this dapp is designed to work with the intended Bean NFT smart contract, t
     "SYMBOL": "Matic",
     "ID": 137
   },
-  "NFT_NAME": "The Stripes NFT",
-  "SYMBOL": "TSNFT",
+  "NFT_NAME": "The BEAN NFT",
+  "SYMBOL": "TBT",
   "MAX_SUPPLY": 992,
   "WEI_COST": 75000000000000000,
   "DISPLAY_COST": 0.075,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "Opeansea",
-  "MARKETPLACE_LINK": "https://opensea.io/collection/the-beans-nft",
   "SHOW_BACKGROUND": true
 }
 ```

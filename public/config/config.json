@@ -1,18 +1,17 @@
 {
-  "CONTRACT_ADDRESS": "0x8bB20CD5EFA164dE748785C23E93B58Ad8814369",
-  "SCAN_LINK": "https://goerli.etherscan.io/address/0x8bB20CD5EFA164dE748785C23E93B58Ad8814369",
+  "CONTRACT_ADDRESS": "0xAb0eF7a87d8688978747D07EfE2cEc701F17F4D8",
+  "SCAN_LINK": "https://goerli.etherscan.io/address/0xAb0eF7a87d8688978747D07EfE2cEc701F17F4D8",
   "NETWORK": {
     "NAME": "Goerli Test Network",
     "SYMBOL": "ETH",
     "ID": 5
   },
-  "NFT_NAME": "GOLIET BEAN",
-  "SYMBOL": "GLT",
+  "NFT_NAME": "DARK SOUL BEAN",
+  "SYMBOL": "DST",
   "MAX_SUPPLY": 100,
   "WEI_COST": 50000000000000000,
   "DISPLAY_COST": 0.05,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "Opeansea",
-  "MARKETPLACE_LINK": "https://opensea.io/collection/the-beans-nft",
   "SHOW_BACKGROUND": true
 }

@@ -377,6 +377,19 @@
   },
   {
     "inputs": [],
+    "name": "SUPERVISOR_ROLE",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
     "name": "UPGRADER_ROLE",
     "outputs": [
       {
@@ -1035,11 +1048,24 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "mintPrice_",
+        "name": "mintPrice",
         "type": "uint256"
       }
     ],
     "name": "setMintPrice",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_dao",
+        "type": "address"
+      }
+    ],
+    "name": "setSupervisor",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
