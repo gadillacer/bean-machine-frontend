@@ -273,7 +273,7 @@ function App() {
                 getData();
               }}
             >
-              Connect Goerli
+              Connect Wallet
             </s.CTAButton>
           ) : (
             <>
@@ -381,9 +381,9 @@ function App() {
             variant="caption"
             align="center"
             display="block"
-            style={{ marginTop: 7, color: "grey" }}
+            style={{ marginTop: 10, color: "grey" }}
           >
-            Powered by LAVISHLAIR
+             Switch to Goerli network first 
           </Typography>
         </Paper>
       </Container>
